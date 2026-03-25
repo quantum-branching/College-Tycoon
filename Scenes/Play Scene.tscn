@@ -1,0 +1,241 @@
+[gd_scene load_steps=22 format=3 uid="uid://bl88013xpdra4"]
+
+[ext_resource type="Texture2D" uid="uid://jh4vo58cwc51" path="res://Images/UI/UI Gray.png" id="1_poyb2"]
+[ext_resource type="Texture2D" uid="uid://bm2860gqho5rd" path="res://Images/UI/Coins.png" id="2_qkqqn"]
+[ext_resource type="Script" uid="uid://dmhprq1slqxtv" path="res://Scripts/money_label.gd" id="3_n4bki"]
+[ext_resource type="Texture2D" uid="uid://blm0t3tbdn6ro" path="res://Images/Buttons/Setting.png" id="4_1ohjn"]
+[ext_resource type="Script" uid="uid://dyxtuqkdgv6ve" path="res://Scripts/SettingButtonPlayScene.gd" id="5_t7hch"]
+[ext_resource type="Texture2D" uid="uid://xrkkjhnv173u" path="res://Images/Buttons/Pushed Button.png" id="6_lb7bb"]
+[ext_resource type="Texture2D" uid="uid://dqb4e8rwlnfr6" path="res://Images/Buttons/Button.png" id="7_jkcot"]
+[ext_resource type="Script" uid="uid://vha4dcpdglu7" path="res://Scripts/New Iteration.gd" id="8_jkcot"]
+[ext_resource type="Script" uid="uid://3ktaepcdbtne" path="res://Scripts/ProfAppButton.gd" id="9_lgi8c"]
+[ext_resource type="Texture2D" uid="uid://c36i5q851utt8" path="res://Images/Buttons/Negative Pushed Button.png" id="9_r4pk6"]
+[ext_resource type="Script" uid="uid://bno85gsgudnpk" path="res://Scripts/Fire Profesors.gd" id="11_qla3m"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_den24"]
+texture = ExtResource("7_jkcot")
+modulate_color = Color(0.501961, 0.501961, 0.501961, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lgi8c"]
+texture = ExtResource("6_lb7bb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r4pk6"]
+texture = ExtResource("7_jkcot")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hidep"]
+texture = ExtResource("7_jkcot")
+modulate_color = Color(0.501961, 0.501961, 0.501961, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jkcot"]
+texture = ExtResource("6_lb7bb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qla3m"]
+texture = ExtResource("6_lb7bb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5rp4c"]
+texture = ExtResource("7_jkcot")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dk5ct"]
+texture = ExtResource("7_jkcot")
+modulate_color = Color(0.501961, 0.501961, 0.501961, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gvagc"]
+texture = ExtResource("9_r4pk6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e24l7"]
+texture = ExtResource("9_r4pk6")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(0, -0.499946)
+scale = Vector2(1152, 647)
+texture = ExtResource("1_poyb2")
+
+[node name="Money Background" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.501961)
+position = Vector2(-426, -299)
+scale = Vector2(300, 50)
+texture = ExtResource("1_poyb2")
+
+[node name="Coins" type="Sprite2D" parent="."]
+position = Vector2(-550, -300)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_qkqqn")
+
+[node name="Money Label" type="Label" parent="."]
+offset_left = -519.0
+offset_top = -323.0
+offset_right = -278.0
+offset_bottom = -275.0
+theme_override_font_sizes/font_size = 24
+text = "Money"
+vertical_alignment = 1
+script = ExtResource("3_n4bki")
+
+[node name="Play Background" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.5)
+position = Vector2(288, -0.499971)
+scale = Vector2(576, 647)
+texture = ExtResource("1_poyb2")
+
+[node name="Top Bar" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.5)
+position = Vector2(288, -299.5)
+scale = Vector2(576, 49)
+texture = ExtResource("1_poyb2")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 527.0
+offset_top = -324.0
+offset_right = 627.0
+offset_bottom = -224.0
+scale = Vector2(0.49, 0.49)
+tooltip_text = "Settings"
+texture_normal = ExtResource("4_1ohjn")
+script = ExtResource("5_t7hch")
+
+[node name="Admission Officers" type="SpinBox" parent="."]
+offset_left = 10.0
+offset_top = -210.0
+offset_right = 568.0
+offset_bottom = -163.0
+tooltip_text = "Admission Officers can process 1500 applicants.
+Each admission officer costs $50000 per year."
+allow_greater = true
+alignment = 2
+suffix = "Admission Officers"
+select_all_on_focus = true
+
+[node name="Professors" type="SpinBox" parent="."]
+visible = false
+offset_left = 10.0
+offset_top = -160.0
+offset_right = 568.0
+offset_bottom = -113.0
+tooltip_text = "Professors cost $60000 per year"
+allow_greater = true
+alignment = 2
+suffix = "Professors"
+select_all_on_focus = true
+
+[node name="Research Programs" type="SpinBox" parent="."]
+offset_left = 10.0
+offset_top = -110.0
+offset_right = 568.0
+offset_bottom = -63.0
+tooltip_text = "Research Programs cost $250000 per year."
+allow_greater = true
+alignment = 2
+suffix = "Research Programs"
+select_all_on_focus = true
+
+[node name="Max Students Housed" type="SpinBox" parent="."]
+offset_left = 10.0
+offset_top = -60.0
+offset_right = 568.0
+offset_bottom = -13.0
+tooltip_text = "Each student costs around $3000 per year to house.
+Since every student is on campus this caps the
+amount of students that can be admitted."
+max_value = 1000.0
+allow_greater = true
+alignment = 2
+suffix = "Max Students"
+custom_arrow_step = 5.0
+select_all_on_focus = true
+
+[node name="Open Applications" type="Button" parent="."]
+offset_left = 10.0
+offset_top = -265.0
+offset_right = 545.0
+offset_bottom = -218.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/disabled = SubResource("StyleBoxTexture_den24")
+theme_override_styles/hover = SubResource("StyleBoxTexture_lgi8c")
+theme_override_styles/normal = SubResource("StyleBoxTexture_r4pk6")
+text = "Open Applications"
+script = ExtResource("8_jkcot")
+
+[node name="Cost Label" type="Label" parent="."]
+offset_top = -325.0
+offset_right = 527.0
+offset_bottom = -274.0
+theme_override_font_sizes/font_size = 32
+text = "Costs: "
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+offset_left = -567.0
+offset_top = -265.0
+offset_right = -4.0
+offset_bottom = 318.0
+tooltip_text = "Acceptance Rate:
+Percentage of students who get accepted, typically
+lower looks better.
+Yield Rate:
+Out of the students that get accepted, this is the
+percentage of students who choose to go here.
+Average SAT Score:
+This is the average SAT score of a student who
+gets accepted (Min: 400, Max: 1600).
+Average GPA:
+This the average GPA of  a student who gets
+accepted (Min: 0.0, Max: 4.0)
+New Students:
+This is the amount of new students who are
+coming to the school.
+Cost of Attendance:
+This is the amount of money that a student
+may have to spend to attend this school.
+Average Aid:
+This is the amount of money the average
+students recieves to attend this school.
+Average Value:
+This is the average that students are
+willing to pay to attend this school."
+mouse_filter = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "Acceptance Rate: 
+Yeild Rate: 
+Average SAT Score:
+Average GPA:
+Applicants:
+New Students: 
+Legacy Students: 
+Cost of Attendance:
+Average Aid: 
+Average Value: 
+Money from Loans: "
+
+[node name="Hire Professors" type="Button" parent="."]
+offset_left = 12.0
+offset_top = -163.0
+offset_right = 279.5
+offset_bottom = -113.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/disabled = SubResource("StyleBoxTexture_hidep")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jkcot")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_qla3m")
+theme_override_styles/normal = SubResource("StyleBoxTexture_5rp4c")
+text = "Hire Professors"
+script = ExtResource("9_lgi8c")
+
+[node name="Fire Profesors" type="Button" parent="."]
+offset_left = 279.5
+offset_top = -163.0
+offset_right = 547.0
+offset_bottom = -113.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/disabled = SubResource("StyleBoxTexture_dk5ct")
+theme_override_styles/hover = SubResource("StyleBoxTexture_gvagc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_e24l7")
+theme_override_styles/normal = SubResource("StyleBoxTexture_5rp4c")
+text = "Fire Professors"
+script = ExtResource("11_qla3m")

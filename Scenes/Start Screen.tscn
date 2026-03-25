@@ -1,0 +1,84 @@
+[gd_scene load_steps=12 format=3 uid="uid://h0lxcpdhba3o"]
+
+[ext_resource type="Texture2D" uid="uid://bj0ajmo06m61e" path="res://Images/Backgrounds/Background.png" id="1_r66lv"]
+[ext_resource type="Script" uid="uid://dmjifwfjksdyb" path="res://Scripts/Settings Button.gd" id="1_u7xew"]
+[ext_resource type="Texture2D" uid="uid://bkske07nk6rqn" path="res://Images/Backgrounds/Icon.png" id="2_rm7fy"]
+[ext_resource type="Texture2D" uid="uid://xrkkjhnv173u" path="res://Images/Buttons/Pushed Button.png" id="3_n6n6q"]
+[ext_resource type="Texture2D" uid="uid://cwf4r8a3tsvot" path="res://Images/Backgrounds/Plaque Background.png" id="4_buk83"]
+[ext_resource type="Texture2D" uid="uid://dqb4e8rwlnfr6" path="res://Images/Buttons/Button.png" id="4_rm7fy"]
+[ext_resource type="Script" uid="uid://uofa2xcqtwcb" path="res://Scripts/PlayButton.gd" id="5_rm7fy"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7d7wm"]
+texture = ExtResource("3_n6n6q")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2n2a2"]
+texture = ExtResource("4_rm7fy")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n6n6q"]
+texture = ExtResource("3_n6n6q")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rm7fy"]
+texture = ExtResource("4_rm7fy")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Background Right" type="Sprite2D" parent="."]
+position = Vector2(750, 0)
+scale = Vector2(5, 5)
+texture = ExtResource("1_r66lv")
+
+[node name="Background Left" type="Sprite2D" parent="."]
+position = Vector2(-760, 0)
+scale = Vector2(5, 5)
+texture = ExtResource("1_r66lv")
+
+[node name="Background Center" type="Sprite2D" parent="."]
+scale = Vector2(5, 5)
+texture = ExtResource("2_rm7fy")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Play" type="Button" parent="."]
+offset_left = -270.0
+offset_top = -140.0
+offset_bottom = -95.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/hover = SubResource("StyleBoxTexture_7d7wm")
+theme_override_styles/normal = SubResource("StyleBoxTexture_2n2a2")
+text = "Play"
+script = ExtResource("5_rm7fy")
+
+[node name="Setting" type="Button" parent="."]
+offset_left = -270.0
+offset_top = -40.0
+offset_bottom = 5.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/hover = SubResource("StyleBoxTexture_n6n6q")
+theme_override_styles/normal = SubResource("StyleBoxTexture_rm7fy")
+text = "Settings"
+script = ExtResource("1_u7xew")
+
+[node name="PlaqueBackground" type="Sprite2D" parent="."]
+position = Vector2(448, -22.5)
+scale = Vector2(4.85, 4.85)
+texture = ExtResource("4_buk83")
+
+[node name="PlaqueBackground2" type="Sprite2D" parent="."]
+position = Vector2(-448, -22.5)
+scale = Vector2(-4.85, 4.85)
+texture = ExtResource("4_buk83")
+
+[node name="Version Label" type="Button" parent="."]
+offset_left = 462.0
+offset_top = 248.0
+offset_right = 580.0
+offset_bottom = 334.0
+theme_override_font_sizes/font_size = 48
+toggle_mode = true
+text = "v1.2"
+flat = true
+alignment = 2

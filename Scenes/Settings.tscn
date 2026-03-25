@@ -1,0 +1,250 @@
+[gd_scene load_steps=7 format=3 uid="uid://byll84luvsng6"]
+
+[ext_resource type="Texture2D" uid="uid://jh4vo58cwc51" path="res://Images/UI/UI Gray.png" id="1_4hxq3"]
+[ext_resource type="Script" uid="uid://c7ivqsjhlewot" path="res://Scripts/Admissions.gd" id="2_flfri"]
+[ext_resource type="Script" uid="uid://dkjhknqe3ajyt" path="res://Scripts/FinancialAid.gd" id="3_yrknh"]
+[ext_resource type="Script" uid="uid://rbqbr5xxfc3s" path="res://Scripts/StudentLoans.gd" id="4_w1nw0"]
+[ext_resource type="Script" uid="uid://bbrygkh1djunv" path="res://Scripts/Transfer.gd" id="5_ppjuv"]
+[ext_resource type="Script" uid="uid://bvesw6u1qu04e" path="res://Scripts/Exit.gd" id="6_ipgag"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(0, -0.499946)
+scale = Vector2(1152, 647)
+texture = ExtResource("1_4hxq3")
+
+[node name="Admissions" type="Button" parent="."]
+offset_left = -576.0
+offset_top = -324.0
+offset_right = -306.0
+offset_bottom = -279.0
+theme_override_font_sizes/font_size = 24
+text = "Admissions"
+script = ExtResource("2_flfri")
+
+[node name="Financial Aid" type="Button" parent="."]
+offset_left = -306.0
+offset_top = -324.0
+offset_right = -36.0
+offset_bottom = -279.0
+theme_override_font_sizes/font_size = 24
+text = "Financial Aid"
+script = ExtResource("3_yrknh")
+
+[node name="Loans" type="Button" parent="."]
+offset_left = 234.0
+offset_top = -324.0
+offset_right = 504.0
+offset_bottom = -279.0
+theme_override_font_sizes/font_size = 24
+text = "Loans"
+script = ExtResource("4_w1nw0")
+
+[node name="Transfer" type="Button" parent="."]
+offset_left = -36.0
+offset_top = -324.0
+offset_right = 234.0
+offset_bottom = -279.0
+theme_override_font_sizes/font_size = 24
+text = "Transfer"
+script = ExtResource("5_ppjuv")
+
+[node name="Exit" type="Button" parent="."]
+offset_left = 504.0
+offset_top = -324.0
+offset_right = 576.0
+offset_bottom = -279.0
+theme_override_font_sizes/font_size = 24
+text = "X"
+script = ExtResource("6_ipgag")
+
+[node name="SpinBox1" type="SpinBox" parent="."]
+offset_left = -565.0
+offset_top = -260.0
+offset_right = -7.0
+offset_bottom = -213.0
+focus_next = NodePath("../SpinBox2")
+focus_previous = NodePath("../SpinBox10")
+focus_mode = 2
+max_value = 1.0
+step = 0.01
+alignment = 2
+custom_arrow_step = 0.05
+select_all_on_focus = true
+
+[node name="SpinBox2" type="SpinBox" parent="."]
+offset_left = -565.0
+offset_top = -210.0
+offset_right = -7.0
+offset_bottom = -163.0
+focus_next = NodePath("../SpinBox1")
+focus_previous = NodePath("../SpinBox3")
+focus_mode = 2
+max_value = 1.0
+step = 0.01
+alignment = 2
+custom_arrow_step = 0.05
+select_all_on_focus = true
+
+[node name="SpinBox3" type="SpinBox" parent="."]
+offset_left = -565.0
+offset_top = -160.0
+offset_right = -7.0
+offset_bottom = -113.0
+focus_next = NodePath("../SpinBox4")
+focus_previous = NodePath("../SpinBox2")
+focus_mode = 2
+max_value = 1.0
+step = 0.01
+alignment = 2
+custom_arrow_step = 0.05
+select_all_on_focus = true
+
+[node name="SpinBox4" type="SpinBox" parent="."]
+offset_left = -565.0
+offset_top = -110.0
+offset_right = -7.0
+offset_bottom = -63.0
+focus_next = NodePath("../SpinBox5")
+focus_previous = NodePath("../SpinBox3")
+focus_mode = 2
+max_value = 1.0
+step = 0.01
+alignment = 2
+custom_arrow_step = 0.05
+select_all_on_focus = true
+
+[node name="SpinBox5" type="SpinBox" parent="."]
+offset_left = -565.0
+offset_top = -60.0
+offset_right = -7.0
+offset_bottom = -13.0
+focus_next = NodePath("../SpinBox6")
+focus_previous = NodePath("../SpinBox4")
+focus_mode = 2
+max_value = 1.0
+step = 0.01
+alignment = 2
+custom_arrow_step = 0.05
+select_all_on_focus = true
+
+[node name="SpinBox6" type="SpinBox" parent="."]
+offset_left = -565.0
+offset_top = -10.0
+offset_right = -7.0
+offset_bottom = 37.0
+focus_next = NodePath("../SpinBox7")
+focus_previous = NodePath("../SpinBox5")
+focus_mode = 2
+max_value = 1.0
+step = 0.01
+alignment = 2
+custom_arrow_step = 0.05
+select_all_on_focus = true
+
+[node name="SpinBox7" type="SpinBox" parent="."]
+offset_left = -565.0
+offset_top = 40.0
+offset_right = -7.0
+offset_bottom = 87.0
+focus_next = NodePath("../SpinBox8")
+focus_previous = NodePath("../SpinBox6")
+focus_mode = 2
+max_value = 1.0
+step = 0.01
+alignment = 2
+custom_arrow_step = 0.05
+select_all_on_focus = true
+
+[node name="SpinBox8" type="SpinBox" parent="."]
+offset_left = -565.0
+offset_top = 90.0
+offset_right = -7.0
+offset_bottom = 137.0
+focus_next = NodePath("../SpinBox9")
+focus_previous = NodePath("../SpinBox7")
+focus_mode = 2
+max_value = 1.0
+step = 0.01
+alignment = 2
+custom_arrow_step = 0.05
+select_all_on_focus = true
+
+[node name="SpinBox9" type="SpinBox" parent="."]
+offset_left = -565.0
+offset_top = 140.0
+offset_right = -7.0
+offset_bottom = 187.0
+focus_next = NodePath("../SpinBox10")
+focus_previous = NodePath("../SpinBox8")
+focus_mode = 2
+max_value = 1.0
+step = 0.01
+alignment = 2
+custom_arrow_step = 0.05
+select_all_on_focus = true
+
+[node name="SpinBox10" type="SpinBox" parent="."]
+offset_left = -565.0
+offset_top = 190.0
+offset_right = -7.0
+offset_bottom = 237.0
+focus_next = NodePath("../SpinBox1")
+focus_previous = NodePath("../SpinBox9")
+focus_mode = 2
+max_value = 1.0
+step = 0.01
+alignment = 2
+custom_arrow_step = 0.05
+select_all_on_focus = true
+
+[node name="MaxValue Label" type="Label" parent="."]
+visible = false
+offset_left = -558.0
+offset_top = 266.0
+offset_right = -28.0
+offset_bottom = 311.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "Max Value: "
+justification_flags = 0
+
+[node name="SpinBox11" type="SpinBox" parent="."]
+offset_left = 10.0
+offset_top = -260.0
+offset_right = 568.0
+offset_bottom = -213.0
+focus_next = NodePath("../SpinBox2")
+focus_previous = NodePath("../SpinBox10")
+focus_mode = 2
+alignment = 2
+prefix = "Min Score:"
+select_all_on_focus = true
+
+[node name="SpinBox12" type="SpinBox" parent="."]
+offset_left = 10.0
+offset_top = -210.0
+offset_right = 568.0
+offset_bottom = -163.0
+focus_next = NodePath("../SpinBox2")
+focus_previous = NodePath("../SpinBox10")
+focus_mode = 2
+alignment = 2
+prefix = "Max Acceptance:"
+select_all_on_focus = true
+
+[node name="Screen Mode" type="OptionButton" parent="."]
+offset_left = 10.0
+offset_top = 190.0
+offset_right = 568.0
+offset_bottom = 237.0
+item_count = 3
+popup/item_0/text = "Fullscreen"
+popup/item_0/id = 0
+popup/item_1/text = "Windowed Fullscreen"
+popup/item_1/id = 1
+popup/item_2/text = "Window"
+popup/item_2/id = 2
